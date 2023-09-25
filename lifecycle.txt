@@ -1,4 +1,5 @@
 
+activity: init
 activity: onCreate
 activity: onStart
 activity: onResume

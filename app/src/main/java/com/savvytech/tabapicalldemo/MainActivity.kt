@@ -40,6 +40,10 @@ class MainActivity : AppCompatActivity() {
         }.attach()
     }
 
+    init {
+        Log.e("activity1", "init $current");
+    }
+
 
     override fun onStart() {
         super.onStart()

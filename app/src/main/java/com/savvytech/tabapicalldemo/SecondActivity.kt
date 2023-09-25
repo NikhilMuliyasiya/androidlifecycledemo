@@ -18,6 +18,10 @@ class SecondActivity : AppCompatActivity() {
         Log.e("activity2", "onCreate $current");
     }
 
+    init {
+        Log.e("activity2", "init $current");
+    }
+
     override fun onStart() {
         super.onStart()
         Log.e("activity2", "onStart $current");
