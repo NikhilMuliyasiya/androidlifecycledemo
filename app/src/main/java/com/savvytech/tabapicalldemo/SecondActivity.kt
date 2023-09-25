@@ -57,4 +57,15 @@ class SecondActivity : AppCompatActivity() {
         Log.e("activity2", "onDestroy $current");
 
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("activity2", "Muliyasiya")
+        Log.e("activity2", "onSaveInstanceState Bundle send ${outState.getString("activity2")} $current");
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Log.e("activity2", "onRestoreInstanceState Bundle receive ${savedInstanceState.getString("activity2")} $current");
+    }
 }

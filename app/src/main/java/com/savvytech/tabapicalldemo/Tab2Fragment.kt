@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.lifecycleScope
+import com.savvytech.tabapicalldemo.ApiClient.Companion.getApiInterface
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
@@ -70,7 +71,7 @@ class Tab2Fragment : Fragment() {
 
     init {
         Log.e("fragment2", "init tab2 $current");
-        apiInterface = ApiClient.getApiClient().create(ApiInterface::class.java)
+        apiInterface = getApiInterface()
     }
 
     fun fetchAllPosts(): LiveData<List<PostModel>> {
@@ -137,6 +138,18 @@ class Tab2Fragment : Fragment() {
     override fun onDetach() {
         super.onDetach()
         Log.e("fragment2", "onDetach tab2 $current");
+
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("fragment2", "Nikhil")
+        Log.e("fragment2", "onSaveInstanceState Bundle send ${outState.getString("fragment2")} $current");
+    }
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+        Log.e("fragment2", "onViewStateRestored Bundle receive ${savedInstanceState?.getString("fragment2")} $current");
 
     }
 

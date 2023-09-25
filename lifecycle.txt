@@ -99,3 +99,87 @@ activity: onResume
 fragment: onResume tab1
 activity2: onStop
 activity2: onDestroy
+
+----------------------------------------------------------------
+
+config change activity  11:50:53.50
+
+-> start activity
+
+    onCreate 11:50:53.50
+    onStart 11:50:53.50
+    onResume 11:50:53.50
+
+-> rotate device
+
+    onPause 11:50:53.50
+    onStop 11:50:53.50
+    onSaveInstanceState Bundle send Nikhil 11:50:53
+    onDestroy 11:50:53.50
+    onCreate 11:51:03.16
+    onStart 11:51:03.16
+    onRestoreInstanceState Bundle receive Nikhil 11
+    onResume 11:51:03.16
+
+-> rotate back device
+
+    onPause 11:51:03.16
+    onStop 11:51:03.16
+    onSaveInstanceState Bundle send Nikhil 11:51:03.16
+    onDestroy 11:51:03.16
+    onCreate 11:53:12.00
+    onStart 11:53:12.00
+    onRestoreInstanceState Bundle receive Nikhil 11:53:12.00
+    onResume 11:53:12.00
+
+----------------------------------------------------------------
+
+config change fragment 11:50:53.50
+
+-> start activity fragment
+
+    init tab1 12:03:38.47
+    onAttach tab1 12:03:38.47
+    onCreate tab1 12:03:38.47
+    onCreateView tab1
+    onViewCreated tab1 12:03:38.47
+    onViewCreated tab1 fetchAllPosts ---- API CALL 12:03:38.47
+    onViewStateRestored Bundle receive null 12:03:38.47
+    onStart tab1 12:03:38.47
+    onResume tab1 12:03:38.47
+
+-> rotate device
+
+    onPause tab1 12:03:38.47
+    onStop tab1 12:03:38.47
+    onSaveInstanceState Bundle send Nikhil 12:03:38.47
+    onDestroyView tab1 12:03:38.47
+    onDestroy tab1 12:03:38.47
+    onDetach tab1 12:03:38.47
+    init tab1 12:03:55.65
+    onAttach tab1 12:03:55.65
+    onCreate tab1 12:03:55.65
+    onCreateView tab1
+    onViewCreated tab1 12:03:55.65
+    onViewCreated tab1 fetchAllPosts ---- API CALL 12:03:55.65
+    onViewStateRestored Bundle receive Nikhil 12:03:55.65
+    onStart tab1 12:03:55.65
+    onResume tab1 12:03:55.65
+
+-> rotate back device
+
+    onPause tab1 12:03:55.65
+    onStop tab1 12:03:55.65
+    onSaveInstanceState Bundle send Nikhil 12:03:55.65
+    onDestroyView tab1 12:03:55.65
+    onDestroy tab1 12:03:55.65
+    onDetach tab1 12:03:55.65
+    init tab1 12:04:14.88
+    onAttach tab1 12:04:14.88
+    onCreate tab1 12:04:14.88
+    onCreateView tab1
+    onViewCreated tab1 12:04:14.88
+    onViewCreated tab1 fetchAllPosts ---- API CALL 12:04:14.88
+    onViewStateRestored Bundle receive Nikhil 12:04:14.88
+    onStart tab1 12:04:14.88
+    onResume tab1 12:04:14.88

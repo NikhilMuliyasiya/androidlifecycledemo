@@ -1,6 +1,7 @@
 package com.savvytech.tabapicalldemo
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
@@ -78,5 +79,16 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         Log.e("activity1", "onDestroy $current");
 
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("activity1", "Nikhil")
+        Log.e("activity1", "onSaveInstanceState Bundle send ${outState.getString("activity1")} $current");
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Log.e("activity1", "onRestoreInstanceState Bundle receive ${savedInstanceState.getString("activity1")} $current");
     }
 }

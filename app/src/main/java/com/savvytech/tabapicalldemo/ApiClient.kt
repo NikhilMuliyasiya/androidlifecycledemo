@@ -34,5 +34,8 @@ class ApiClient {
             return retrofit!!
         }
 
+        fun getApiInterface(): ApiInterface? = retrofit?.create(ApiInterface::class.java)
+
+
     }
 }
